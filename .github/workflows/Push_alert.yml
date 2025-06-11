@@ -16,8 +16,5 @@ jobs:
     - name: Build and Deploy
       run: |
         # Configurar Surge.sh
-        npm install --global surge
+        run: npx surge ./ --domain Elec2-Partial1.surge.sh --token ${{ 437f459005c9a07d8425c0f90e88f17f}}
         surge token <437f459005c9a07d8425c0f90e88f17f> # Reemplazar <SURGE_API_KEY> con la API Key de Surge.
-
-        # Desplegar en Surge.sh
-        surge --project ./ --domain <Elec2-Partial1.surge.sh>.surge.sh # Reemplazar <SURGE_SUBDOMAIN> con mi subdominio único 
